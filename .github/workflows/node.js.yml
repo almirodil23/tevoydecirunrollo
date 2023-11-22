@@ -20,10 +20,14 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: Install dependencies
+    - name: Install dependencies 1
       run: 
           npm install express
+    - name: Install dependencies 2
+      run:
           npm install mongoose
+    - name: Instal dependencies 3
+      run:
           npm install nodemon
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
@@ -31,4 +35,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm start
+    - run: node.js
