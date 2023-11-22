@@ -15,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 14  # Cambiado a una versión más común, ajusta según tus necesidades
+          node-version: 18.17.0  # Cambiado a una versión más común, ajusta según tus necesidades
 
       - name: Install dependencies
         run: npm install express mongoose nodemon
