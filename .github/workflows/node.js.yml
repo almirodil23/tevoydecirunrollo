@@ -18,8 +18,12 @@ jobs:
       matrix:
         node-version: [18.17.0]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+    
     steps:
+    - name: setup node
+      uses: actions/setup-node@master
+      with:
+          node-version: ${{ matrix.node-version }}
     - name: Install dependencies 1
       run: 
           npm install express
