@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<div>
+    <table>
+        <caption>Libros</caption>
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Autor</th>
+                <th>Idioma</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let libro of libros">
+              <td>{{libro.titulo}}</td>
+              <td>{{libro.autor}}</td>
+              <td>{{libro.idioma}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<button routerLink="/add">Ir a añadir</button>
