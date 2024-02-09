@@ -17,12 +17,13 @@ import { LibroService } from '../libro.service';
 
 
 export class AddComponent {
-  @Input() libros: Libro[]=[]
+  libros: Libro[]=[]
 
   
   
   constructor(public formBuilder:FormBuilder,private libroService: LibroService
     ){}
+    
 
   add: FormGroup = this.formBuilder.group({
     titulo: ['', Validators.required],
@@ -32,6 +33,8 @@ export class AddComponent {
 
 
 onSubmit(): void {
+  this.libros = this.libroService.obtenerLibros();
+
   let last: number = 0;
 
   if (this.libros.length > 0) {
