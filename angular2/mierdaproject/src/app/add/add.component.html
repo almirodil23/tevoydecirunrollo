@@ -10,7 +10,7 @@
     </ul>
   </div>
   <div>
-    <form [formGroup]="add" (ngSubmit)="onSubmit()">
+    <form [formGroup]="add" id="add" (ngSubmit)="onSubmit()">
     <div>
         <label for="title">Titulo</label>
         <input type="text" id="title" formControlName="titulo" required>

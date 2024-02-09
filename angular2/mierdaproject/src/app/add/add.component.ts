@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TablaComponent } from '../tabla/tabla.component';
 import { Libro } from '../libro.model';
 import { CommonModule } from '@angular/common';
@@ -34,7 +34,12 @@ export class AddComponent {
 onSubmit(): void {
   let last: number = 0;
 
-  last=this.libros[this.libros.length - 1].id + 1;
+  if (this.libros.length > 0) {
+    last = this.libros[this.libros.length - 1].id + 1;
+    console.log(last)
+  } else {
+    last = 0; 
+  }
   const newProduct: Libro = {
     id: last,
     titulo: this.add.value.titulo,
@@ -42,7 +47,6 @@ onSubmit(): void {
     idioma: this.add.value.idioma
   };
   this.libroService.agregarLibro(newProduct);
-  this.add.reset();
-
+  this.add.reset()
 }
 }

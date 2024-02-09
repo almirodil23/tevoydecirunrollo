@@ -4,6 +4,7 @@
         <caption>Libros</caption>
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Titulo</th>
                 <th>Autor</th>
                 <th>Idioma</th>
@@ -11,6 +12,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let libro of libros">
+              <td>{{libro.id}}</td>  
               <td>{{libro.titulo}}</td>
               <td>{{libro.autor}}</td>
               <td>{{libro.idioma}}</td>
