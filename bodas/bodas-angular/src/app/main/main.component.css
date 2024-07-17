@@ -1,0 +1,171 @@
+@keyframes grow-shrink {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+    to {
+      opacity: 1; /* Se vuelve completamente visible */
+      transform: translateX(0); /* Se desplaza hacia la derecha */
+    }
+  }
+
+.main {
+    min-height:3000px;
+    display:flex;
+    flex-direction:column;
+    position: absolute;
+    top:100vh;
+    width: 100vw;
+    box-sizing: border-box; /* Asegura que el padding y border se incluyan en el ancho total */
+    padding: 10%; 
+    user-select: none;
+}
+
+ 
+
+
+
+.text1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 1;
+    position: absolute;
+    margin-top:100px;
+    z-index: 30;
+    user-select: none;
+  }
+  
+  
+  .slide-in-active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+.text1 p {
+    font-size:18px;
+    justify-content: center;
+    margin-left:5px;
+    color:var(--anti-text-color);
+    user-select: none;
+    font-family:var(--letras);
+    margin-top: 1.5px;
+}
+
+
+
+.animated {
+  animation: grow-shrink 2s forwards;
+}
+
+
+img {
+  view-timeline-name: --reveal;
+
+  animation-name: show;
+  animation-fill-mode: both;
+
+  animation-timeline: --reveal;
+  animation-range: entry 25%  35%;
+  user-select: none;
+}
+
+
+
+@keyframes show {
+  from {
+    opacity:0; scale:10%
+  }
+
+  to {
+    opacity:1; scale:100%;
+  }
+}  
+
+
+div {
+  user-select: none;
+}
+
+.tarifa {
+  position: relative;
+  display:flex;
+  z-index: 0;
+  top: -640px;
+  border: 2px solid #fff;
+  color:var(--anti-text-color);
+  width:16vw;
+  padding:0.6%;
+  left: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  view-timeline-name: --reveal;
+
+  animation-name: show;
+  animation-fill-mode: both;
+
+  animation-timeline: --reveal;
+  animation-range: entry 25%  35%;
+  user-select: none;
+}
+
+.tarifa a {
+  display: flex;
+  align-items: center;
+  padding-left: 5vw;
+}
+
+.tarifa1 {
+  position: relative;
+  display:flex;
+  z-index:0 ;
+  top: -650px;
+  border: 2px solid #fff;
+  color:var(--anti-text-color);
+  width:16vw;
+  padding:1%;
+  right: -860px;
+ background-color: rgba(0, 0, 0, 0.5);
+ view-timeline-name: --reveal;
+
+ animation-name: show;
+ animation-fill-mode: both;
+
+ animation-timeline: --reveal;
+ animation-range: entry 25%  35%;
+ user-select: none;
+}
+
+.tarifa1:hover {
+   background-color: #fff;
+   color: var(--text-color)
+}
+
+.tarifa:hover {
+  background-color: #fff;
+  color: var(--text-color)
+}
+
+video {
+  view-timeline-name: --reveal;
+
+  animation-name: show;
+  animation-fill-mode: both;
+
+  animation-timeline: --reveal;
+  animation-range: entry 25%  50%;
+  user-select: none;
+}
+
+.fullscreen-video{
+  z-index: -5;
+}
+
+

@@ -1,0 +1,62 @@
+.container-header{
+    display:flex;
+    justify-content: space-around;
+    padding:2% 5%;
+    height: 3vh;
+    background-color: transparent;
+    font-family: var(--letras);
+}
+
+.brand-name{
+    width:15%;
+}
+
+.info{
+    width:50%;
+    display:flex;
+    justify-content: space-evenly;
+    background-color: transparent;
+}
+
+.info  div:hover {
+        border-bottom: 2px solid var(--anti-text-color);
+        user-select: none   ;
+        height:114%;
+}
+
+.non-top{
+    background-color: var(--anti-background-color);
+}
+
+.non-top div{
+    color: var(--anti-text-color);
+}
+
+.non-top div div:hover {
+    border-bottom: 2px solid var(--anti-text-color);
+    user-select: none;
+}
+
+#audioPlayer {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10000;
+  }
+  #audioPlayer button {
+    
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  #audioPlayer button:hover {
+    color: lightgray;
+  }

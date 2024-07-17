@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+div{
+  color:var(--  text-color);
+}
+
+  p {
+     display:flex;
+    font-family:var(--letras);
+}
+
+*{
+  box-sizing: content-box;
+}
+
+:root {
+    --primary-color: #3498db;
+    --background-color: #f5f5f5;
+    --anti-background-color:#101010;
+    --text-color: #101010;
+    --anti-text-color:#f5f5f5;
+    --letras:adobe-garamond-pro;
+
+  }
+body {
+    margin:0;
+    overflow-x: hidden;
+}  
+
+.fullscreen-section {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    z-index: -10;
+    overflow-x: hidden;
+  }
+
+.fullscreen-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    z-index: -10;
+    overflow-x: hidden;
+  }
+
+.row{
+  flex-wrap: nowrap;
+}
