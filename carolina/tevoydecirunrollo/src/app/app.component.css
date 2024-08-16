@@ -1,0 +1,23 @@
+#audioPlayer {
+    position: fixed;
+    bottom: 10vh;
+    right: 3vh;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 1%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10000;
+  }
+  #audioPlayer button {
+    
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  #audioPlayer button:hover {
+    color: lightgray;
+  }

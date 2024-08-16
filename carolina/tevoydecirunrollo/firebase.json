@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/tevoydecirunrollo",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

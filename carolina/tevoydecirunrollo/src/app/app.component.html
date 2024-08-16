@@ -1,0 +1,16 @@
+<div class="fullscreen-section">
+  <audio id="backgroundAudio" src="assets/tevoymatar.mp3" autoplay></audio>
+</div>
+<div *ngIf="imagen" style="width:60vw;height:100vh;position:absolute;left:40%;transform: translate(-50%);">
+  <img src={{imagen}} alt="notedigoningunrollo" style="width:100vw;clip-path: inset(0 50px 0 0);">
+
+</div>
+
+<div *ngIf="imagePath">
+ <img src={{imagePath}} alt="hoynoestamosguapos" style="width:100vw;margin-top:30vh;">
+</div>
+
+<div id="audioPlayer">
+  <button id="playPauseBtn"><i class="fas fa-pause"></i></button>
+  <button id="stopBtn"><i class="fas fa-stop"></i></button>
+</div>
